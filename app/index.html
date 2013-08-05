@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses Home Demo</title>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/watch/watch.js"></script>
+    <script src="app.js"></script>
+    <script src="selector.js"></script>
+    <script src="CoursesHome.js"></script>
+    <script src="CoursesHomeController.js"></script>
+    <script src="CoursesFactory.js"></script>
+</head>
+
+<body ng-app="CoursesHomeApp">
+<div ng-controller="CoursesHomeController"/>
+    <iz-selector collection="model.topics" selector="model.topic">Topics:</iz-selector><br/>
+    <iz-selector collection="model.languages" selector="model.language">Languages:</iz-selector><br/>
+    <iz-selector collection="model.sortOrders" selector="model.sortOrder">Sort:</iz-selector>
+
+    <h1>{{model.coursesList.length}} Courses</h1>
+    <ul>
+        <li ng-repeat="course in model.coursesPage">
+            <div>{{course.title}}
+                - Views: {{course.views}}
+                - Rating: {{course.rating}}
+                - Published on: {{course.pubDate | date:shortDate}}</div>
+        </li>
+    </ul>
+
+     <iz-selector collection="model.pages" selector="model.page"/>
+</div>
+</body>
+</html>

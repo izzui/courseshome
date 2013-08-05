@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{067BB25D-9F88-4074-8B5C-5469FEB7ABB0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>courseshome</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60059/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES3</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".bowerrc" />
+    <TypeScriptCompile Include="app\CoursesFactory.ts" />
+    <TypeScriptCompile Include="app\app.ts" />
+    <Content Include=".gitignore" />
+    <Content Include="app\app.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="app\app.min.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesFactory.js">
+      <DependentUpon>CoursesFactory.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesFactory.min.js">
+      <DependentUpon>CoursesFactory.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHome.js">
+      <DependentUpon>CoursesHome.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHome.min.js">
+      <DependentUpon>CoursesHome.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHome.ts" />
+    <Content Include="app\CoursesHomeController.js">
+      <DependentUpon>CoursesHomeController.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHomeController.min.js">
+      <DependentUpon>CoursesHomeController.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHomeController.ts" />
+    <TypeScriptCompile Include="app\ICourse.ts" />
+    <Content Include="app\ICourse.js">
+      <DependentUpon>ICourse.ts</DependentUpon>
+    </Content>
+    <Content Include="app\ICourse.min.js">
+      <DependentUpon>ICourse.ts</DependentUpon>
+    </Content>
+    <Content Include="app\index.html" />
+    <Content Include="app\lib\angular\angular-mocks.js" />
+    <Content Include="app\lib\angular\angular.js" />
+    <Content Include="app\lib\angular\angular.min.js" />
+    <TypeScriptCompile Include="app\selector.ts" />
+    <Content Include="app\selector.js">
+      <DependentUpon>selector.ts</DependentUpon>
+    </Content>
+    <Content Include="app\lib\watch\watch.js" />
+    <Content Include="bower.json" />
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular-mocks.d.ts" />
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.ts" />
+    <Content Include="d.ts\DefinitelyTyped\jasmine\jasmine.d.ts" />
+    <Content Include="d.ts\DefinitelyTyped\watch\watch.d.ts" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\.gitattributes" />
+    <Content Include="node_modules\grunt-contrib-watch\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\benchmarks\gaze100s.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\lib\gaze.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\lib\helper.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\lib\globule.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\examples\g.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\examples\usr-local.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\glob.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\graceful-fs.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\test\open.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\test\ulimit.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\inherits\inherits.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\00-setup.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\bash-comparison.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\cwd-test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\mark.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\nocase-nomagic.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\pause-resume.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\root-nomount.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\root.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\zz-cleanup.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\build.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\build\minify.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\build\post-compile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\build\pre-compile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\dist\lodash.compat.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\dist\lodash.compat.min.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\dist\lodash.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\dist\lodash.min.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\dist\lodash.underscore.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\dist\lodash.underscore.min.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\LICENSE.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\lodash.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\perf\perf.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\test\test-build.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\test\test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\benchmark.js\benchmark.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\benchmark.js\LICENSE.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\platform.js\LICENSE.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\platform.js\platform.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\qunit-clib\LICENSE.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\qunit-clib\qunit-clib.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\qunit\qunit\qunit.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\buffer-entry.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\entry-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\entry.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\extended-header-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\extended-header.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\extract.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\global-header-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\header.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\pack.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\lib\parse.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\tar.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\block-stream\block-stream.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\fstream.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\abstract.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\collect.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\dir-reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\dir-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\file-reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\file-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\get-type.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\link-reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\link-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\proxy-reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\proxy-writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\socket-reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\lib\writer.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\graceful-fs\graceful-fs.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\inherits\inherits.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\mkdirp\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\rimraf\rimraf.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\underscore\underscore.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\minimatch.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\lib\lru-cache.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\s.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\test\basic.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\test\foreach.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\test\memory-leak.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\sigmund\bench.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\sigmund\sigmund.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\sigmund\test\basic.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\test\basic.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\test\brace-expand.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\test\caching.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\test\defaults.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\css\baz.css" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\css\qux.css" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\deep\deep.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\deep\deeper\deeper.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\deep\deeper\deepest\deepest.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\js\bar.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\js\foo.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\globule_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\add_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\api_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\file_poller.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\nested\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\nested\sub2\two.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\nested\sub\two.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\nested\three.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\Project %28LO%29\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\sub\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\fixtures\sub\two.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\helper.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\matching_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\patterns_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\relative_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\rename_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\safewrite_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\watch_race_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\test\watch_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\lib\client.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\lib\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\lib\public\livereload.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\lib\server.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\debug.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\example\app.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\example\browser.html" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\example\wildcards.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\example\worker.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\lib\debug.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\CHANGELOG.txt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\examples\autobahn_client.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\examples\client.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\examples\server.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\examples\sse.html" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\examples\ws.html" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\eventsource.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\api.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\api\event.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\api\event_target.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\client.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\draft75_parser.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\draft76_parser.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\hybi_parser.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\hybi_parser\handshake.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\lib\faye\websocket\hybi_parser\stream_reader.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\faye\websocket\client_spec.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\faye\websocket\draft75parser_spec.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\faye\websocket\draft76parser_spec.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\faye\websocket\hybi_parser_spec.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\runner.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\actions\collectable.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\actions\commandable.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\bin\nopt.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\examples\my-program.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\lib\nopt.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\node_modules\abbrev\lib\abbrev.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\test\api.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\test\collectable.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\test\commandable.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\test\fixtures\a.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\test\fixtures\b.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\util\extend.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\util\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\.gitmodules" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\benchmark.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\examples.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\index.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\expect.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\index.html" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\jquery.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\mocha.css" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\mocha.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\qs.css" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\browser\qs.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\parse.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\test\stringify.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\tasks\tiny-lr.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\tasks\tiny-lr.mk" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\test\client.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\test\middleware.js" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\test\server.js" />
+    <Content Include="node_modules\grunt-contrib-watch\tasks\lib\livereload.js" />
+    <Content Include="node_modules\grunt-contrib-watch\tasks\lib\taskrun.js" />
+    <Content Include="node_modules\grunt-contrib-watch\tasks\lib\taskrunner.js" />
+    <Content Include="node_modules\grunt-contrib-watch\tasks\watch.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\atBegin\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\atBegin\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\dateFormat\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\dateFormat\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\events\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\events\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\events\lib\one\test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\events\lib\two\test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\fail\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\fail\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\livereload\css\one.css" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\livereload\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\livereload\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\multiTargets\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\multiTargets\lib\fail.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\multiTargets\lib\interrupt.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\multiTargets\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\multiTargets\lib\two.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\multiTargets\lib\wait.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\nospawn\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\nospawn\lib\interrupt.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\nospawn\lib\nospawn.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\nospawn\lib\spawn.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\oneTarget\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\oneTarget\lib\one.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\patterns\Gruntfile.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\patterns\lib\edit.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\patterns\lib\sub\dontedit.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\tasks\echo.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\events_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\fail_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\helper.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\livereload_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\nospawn_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\patterns_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\reloadgruntfile_test.js" />
+    <Content Include="node_modules\grunt-contrib-watch\test\tasks\watch_test.js" />
+    <Content Include="node_modules\grunt\custom-gruntfile.js" />
+    <Content Include="node_modules\grunt\Gruntfile.js" />
+    <Content Include="node_modules\grunt\lib\grunt.js" />
+    <Content Include="node_modules\grunt\lib\grunt\cli.js" />
+    <Content Include="node_modules\grunt\lib\grunt\config.js" />
+    <Content Include="node_modules\grunt\lib\grunt\event.js" />
+    <Content Include="node_modules\grunt\lib\grunt\fail.js" />
+    <Content Include="node_modules\grunt\lib\grunt\file.js" />
+    <Content Include="node_modules\grunt\lib\grunt\help.js" />
+    <Content Include="node_modules\grunt\lib\grunt\log.js" />
+    <Content Include="node_modules\grunt\lib\grunt\option.js" />
+    <Content Include="node_modules\grunt\lib\grunt\task.js" />
+    <Content Include="node_modules\grunt\lib\grunt\template.js" />
+    <Content Include="node_modules\grunt\lib\grunt\util.js" />
+    <Content Include="node_modules\grunt\lib\util\exit.js" />
+    <Content Include="node_modules\grunt\lib\util\namespace.js" />
+    <Content Include="node_modules\grunt\lib\util\task.js" />
+    <Content Include="node_modules\grunt\node_modules\async\.gitmodules" />
+    <Content Include="node_modules\grunt\node_modules\async\index.js" />
+    <Content Include="node_modules\grunt\node_modules\async\lib\async.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\browser.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\cake.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\coffee-script.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\command.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\grammar.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\helpers.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\index.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\lexer.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\nodes.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\optparse.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\parser.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\repl.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\rewriter.js" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\lib\coffee-script\scope.js" />
+    <Content Include="node_modules\grunt\node_modules\colors\colors.js" />
+    <Content Include="node_modules\grunt\node_modules\colors\example.html" />
+    <Content Include="node_modules\grunt\node_modules\colors\example.js" />
+    <Content Include="node_modules\grunt\node_modules\colors\MIT-LICENSE.txt" />
+    <Content Include="node_modules\grunt\node_modules\colors\test.js" />
+    <Content Include="node_modules\grunt\node_modules\colors\themes\winston-dark.js" />
+    <Content Include="node_modules\grunt\node_modules\colors\themes\winston-light.js" />
+    <Content Include="node_modules\grunt\node_modules\dateformat\lib\dateformat.js" />
+    <Content Include="node_modules\grunt\node_modules\dateformat\test\test_weekofyear.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\index.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\lib\eventemitter2.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\common.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\perf\benchmark.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\simple\addListener.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\simple\emit.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\simple\reconfigure.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\simple\removeListener.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\simple\setMax.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\simple\ttl.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\addListener.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\all.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\customDelimiter.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\k1.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\options.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\removeListener.js" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\test\wildcardEvents\ttl.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\Gruntfile.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\lib\findup-sync.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\build.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\build\minify.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\build\post-compile.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\build\pre-compile.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.compat.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.compat.min.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.min.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.underscore.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.underscore.min.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\index.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\LICENSE.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\lodash.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\perf\perf.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\test\test-build.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\test\test.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\benchmark.js\benchmark.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\benchmark.js\LICENSE.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\platform.js\LICENSE.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\platform.js\platform.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\qunit-clib\LICENSE.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\qunit-clib\qunit-clib.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\qunit\qunit\qunit.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\buffer-entry.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\entry-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\entry.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\extended-header-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\extended-header.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\extract.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\global-header-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\header.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\pack.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\lib\parse.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\tar.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\block-stream\block-stream.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\fstream.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\abstract.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\collect.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\dir-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\dir-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\file-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\file-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\get-type.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\link-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\link-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\proxy-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\proxy-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\reader.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\socket-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\lib\writer.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\graceful-fs\graceful-fs.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\inherits\inherits.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\mkdirp\index.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\rimraf\rimraf.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\underscore\underscore.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\test\findup-sync_test.js" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\test\fixtures\a.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\test\fixtures\aaa.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\test\fixtures\a\b\bar.txt" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\test\fixtures\a\foo.txt" />
+    <Content Include="node_modules\grunt\node_modules\glob\examples\g.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\examples\usr-local.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\glob.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\graceful-fs.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\test\open.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\test\ulimit.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\inherits\inherits.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\00-setup.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\bash-comparison.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\cwd-test.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\mark.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\nocase-nomagic.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\pause-resume.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\root-nomount.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\root.js" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\zz-cleanup.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\child.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\dist\ba-hooker.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\dist\ba-hooker.min.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\grunt.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\lib\hooker.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\parent.js" />
+    <Content Include="node_modules\grunt\node_modules\hooker\test\hooker_test.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\encodings\big5.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\encodings\gbk.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\encodings\singlebyte.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\encodings\table\big5.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\encodings\table\gbk.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\generation\generate-big5-table.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\generation\generate-singlebyte.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\index.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\big5-test.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\big5File.txt" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\cyrillic-test.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\gbk-test.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\gbkFile.txt" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\greek-test.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\main-test.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\performance.js" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\test\turkish-test.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\bin\js-yaml.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\examples\custom_types.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\examples\dumper.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\examples\sample_document.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\index.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\common.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\dumper.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\exception.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\loader.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\mark.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\require.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema\default.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema\minimal.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema\safe.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\binary.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\bool.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\float.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\int.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\js\function.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\js\regexp.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\js\undefined.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\map.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\merge.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\null.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\omap.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\pairs.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\seq.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\set.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\str.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\timestamp.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\arguments.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\choice.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\constants.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\help.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\nargs.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\parents.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\prefix_chars.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\sub_commands.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\sum.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\testformatters.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\index.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\append.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\append\constant.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\count.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\help.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store\constant.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store\false.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store\true.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\subparsers.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\version.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action_container.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argparse.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument\error.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument\exclusive.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument\group.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument_parser.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\const.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\help\added_formatters.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\help\formatter.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\namespace.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\dist\underscore.string.min.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\lib\underscore.string.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\run-qunit.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\speed.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\strings.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\strings_standalone.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test.html" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_standalone.html" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\arrays.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\chaining.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\collections.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\functions.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\index.html" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\objects.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\speed.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\utility.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\jquery.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\jslitmus.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\qunit.css" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\qunit.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\underscore.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\favicon.ico" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\index.html" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\index.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\underscore-min.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\underscore.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\bin\esparse.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\bin\esvalidate.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\doc\index.html" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\esprima.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\examples\detectnestedternary.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\examples\findbooleantrap.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\examples\tokendist.js" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\index.html" />
+    <Content Include="node_modules\grunt\node_modules\lodash\build.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\build\minify.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\build\post-compile.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\build\pre-compile.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\index.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\LICENSE.txt" />
+    <Content Include="node_modules\grunt\node_modules\lodash\lodash.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\lodash.min.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\lodash.underscore.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\lodash.underscore.min.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\buffer-entry.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\entry-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\entry.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\extended-header-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\extended-header.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\extract.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\global-header-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\header.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\pack.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\lib\parse.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\tar.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\block-stream\block-stream.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\fstream.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\abstract.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\collect.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\dir-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\dir-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\file-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\file-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\get-type.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\link-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\link-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\proxy-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\proxy-writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\reader.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\socket-reader.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\lib\writer.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\graceful-fs\graceful-fs.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\inherits\inherits.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\mkdirp\index.js" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\rimraf\rimraf.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\minimatch.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\lib\lru-cache.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\s.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\test\basic.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\test\foreach.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\test\memory-leak.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\sigmund\bench.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\sigmund\sigmund.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\sigmund\test\basic.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\test\basic.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\test\brace-expand.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\test\caching.js" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\test\defaults.js" />
+    <Content Include="node_modules\grunt\node_modules\nopt\bin\nopt.js" />
+    <Content Include="node_modules\grunt\node_modules\nopt\examples\my-program.js" />
+    <Content Include="node_modules\grunt\node_modules\nopt\lib\nopt.js" />
+    <Content Include="node_modules\grunt\node_modules\nopt\node_modules\abbrev\lib\abbrev.js" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\node_modules\graceful-fs\graceful-fs.js" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\node_modules\graceful-fs\test\open.js" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\rimraf.js" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\test\test-async.js" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\test\test-fiber.js" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\test\test-sync.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\dist\underscore.string.min.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\lib\underscore.string.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\run-qunit.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\speed.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\strings.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\strings_standalone.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test.html" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_standalone.html" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\arrays.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\chaining.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\collections.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\functions.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\objects.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\speed.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\temp.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\temp_tests.html" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\test.html" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\utility.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\jquery.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\jslitmus.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\qunit.css" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\qunit.js" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\test\underscore.js" />
+    <Content Include="node_modules\grunt\node_modules\which\which.js" />
+    <Content Include="node_modules\grunt\test\fixtures\a.js" />
+    <Content Include="node_modules\grunt\test\fixtures\b.js" />
+    <Content Include="node_modules\grunt\test\fixtures\banner.js" />
+    <Content Include="node_modules\grunt\test\fixtures\banner2.js" />
+    <Content Include="node_modules\grunt\test\fixtures\banner3.js" />
+    <Content Include="node_modules\grunt\test\fixtures\BOM.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\css\baz.css" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\css\qux.css" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\deep\deep.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\deep\deeper\deeper.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\deep\deeper\deepest\deepest.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\js\bar.js" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\js\foo.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\dist\built-123-a.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\dist\built-123-b.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\dist\built-a.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\dist\built-b.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\dist\built.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\src\file1-123.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\src\file1.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\src\file2-123.js" />
+    <Content Include="node_modules\grunt\test\fixtures\files\src\file2.js" />
+    <Content Include="node_modules\grunt\test\fixtures\Gruntfile-print-text.js" />
+    <Content Include="node_modules\grunt\test\fixtures\iso-8859-1.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\lint.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\no_BOM.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\octocat.png" />
+    <Content Include="node_modules\grunt\test\fixtures\spawn-multibyte.js" />
+    <Content Include="node_modules\grunt\test\fixtures\spawn.js" />
+    <Content Include="node_modules\grunt\test\fixtures\template.txt" />
+    <Content Include="node_modules\grunt\test\fixtures\utf8.txt" />
+    <Content Include="node_modules\grunt\test\gruntfile\multi-task-files.js" />
+    <Content Include="node_modules\grunt\test\grunt\config_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\event_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\file_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\log_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\option_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\task_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\template_test.js" />
+    <Content Include="node_modules\grunt\test\grunt\util_test.js" />
+    <Content Include="node_modules\grunt\test\util\namespace_test.js" />
+    <Content Include="node_modules\grunt\test\util\task_test.js" />
+    <Content Include="package.json" />
+    <Content Include="spec\CoursesHome_spec.js">
+      <DependentUpon>CoursesHome_spec.ts</DependentUpon>
+    </Content>
+    <Content Include="spec\CoursesHome_spec.min.js">
+      <DependentUpon>CoursesHome_spec.ts</DependentUpon>
+    </Content>
+    <Content Include="spec\CoursesHome_spec.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="karma.conf.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="spec\CoursesHome_spec.js.map">
+      <DependentUpon>CoursesHome_spec.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\lib\angular\.bower.json" />
+    <Content Include="app\lib\angular\bower.json" />
+    <Content Include="node_modules\grunt-contrib-watch\.editorconfig" />
+    <Content Include="node_modules\grunt-contrib-watch\.jshintrc" />
+    <Content Include="node_modules\grunt-contrib-watch\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\.travis.yml" />
+    <Content Include="node_modules\grunt-contrib-watch\AUTHORS" />
+    <Content Include="node_modules\grunt-contrib-watch\CHANGELOG" />
+    <Content Include="node_modules\grunt-contrib-watch\CONTRIBUTING.md" />
+    <Content Include="node_modules\grunt-contrib-watch\docs\watch-examples.md" />
+    <Content Include="node_modules\grunt-contrib-watch\docs\watch-options.md" />
+    <Content Include="node_modules\grunt-contrib-watch\LICENSE-MIT" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\.bin\tiny-lr" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\.bin\tiny-lr.cmd" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\.editorconfig" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\.jshintrc" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\.travis.yml" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\AUTHORS" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\LICENSE-MIT" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\.jshintrc" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\.travis.yml" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\LICENSE-MIT" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\.bin\lodash" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\.bin\lodash.cmd" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\.travis.yml" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\graceful-fs\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\inherits\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\node_modules\inherits\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\glob\test\bash-results.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\doc\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\test\template\a.jst" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\test\template\b.jst" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\test\template\c.jst" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\test\template\d.tpl" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\benchmark.js\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\platform.js\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\qunit-clib\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\qunit\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\block-stream\LICENCE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\block-stream\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\LICENCE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\fstream\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\graceful-fs\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\graceful-fs\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\inherits\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\mkdirp\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\mkdirp\README.markdown" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\rimraf\AUTHORS" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\rimraf\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\tar\vendor\rimraf\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\underscore\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\lodash\vendor\underscore\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\AUTHORS" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\lru-cache\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\sigmund\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\sigmund\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\node_modules\sigmund\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\node_modules\minimatch\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\node_modules\globule\test\fixtures\expand\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\gaze\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\.travis.yml" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\bin\tiny-lr" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\bin\update-livereload" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\component.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\History.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\debug\Readme.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\examples\haproxy.conf" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\README.markdown" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\server.crt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\faye-websocket\spec\server.key" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\.bin\nopt" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\.bin\nopt.cmd" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\node_modules\abbrev\LICENSE" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\node_modules\abbrev\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\node_modules\abbrev\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\node_modules\nopt\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\noptify\readme.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\.npmignore" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\.travis.yml" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\component.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\History.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\Makefile" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\node_modules\qs\Readme.md" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\node_modules\tiny-lr\readme.md" />
+    <Content Include="node_modules\grunt-contrib-watch\package.json" />
+    <Content Include="node_modules\grunt-contrib-watch\README.md" />
+    <Content Include="node_modules\grunt-contrib-watch\test\fixtures\livereload\sass\one.scss" />
+    <Content Include="node_modules\grunt\.npmignore" />
+    <Content Include="node_modules\grunt\.travis.yml" />
+    <Content Include="node_modules\grunt\AUTHORS" />
+    <Content Include="node_modules\grunt\CHANGELOG" />
+    <Content Include="node_modules\grunt\CONTRIBUTING.md" />
+    <Content Include="node_modules\grunt\docs\README.md" />
+    <Content Include="node_modules\grunt\LICENSE-MIT" />
+    <Content Include="node_modules\grunt\node_modules\.bin\cake" />
+    <Content Include="node_modules\grunt\node_modules\.bin\cake.cmd" />
+    <Content Include="node_modules\grunt\node_modules\.bin\coffee" />
+    <Content Include="node_modules\grunt\node_modules\.bin\coffee.cmd" />
+    <Content Include="node_modules\grunt\node_modules\.bin\js-yaml" />
+    <Content Include="node_modules\grunt\node_modules\.bin\js-yaml.cmd" />
+    <Content Include="node_modules\grunt\node_modules\.bin\lodash" />
+    <Content Include="node_modules\grunt\node_modules\.bin\lodash.cmd" />
+    <Content Include="node_modules\grunt\node_modules\.bin\nopt" />
+    <Content Include="node_modules\grunt\node_modules\.bin\nopt.cmd" />
+    <Content Include="node_modules\grunt\node_modules\.bin\which" />
+    <Content Include="node_modules\grunt\node_modules\.bin\which.cmd" />
+    <Content Include="node_modules\grunt\node_modules\async\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\async\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\async\Makefile" />
+    <Content Include="node_modules\grunt\node_modules\async\package.json" />
+    <Content Include="node_modules\grunt\node_modules\async\README.md" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\bin\cake" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\bin\coffee" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\CNAME" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\extras\jsl.conf" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\package.json" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\Rakefile" />
+    <Content Include="node_modules\grunt\node_modules\coffee-script\README" />
+    <Content Include="node_modules\grunt\node_modules\colors\package.json" />
+    <Content Include="node_modules\grunt\node_modules\colors\ReadMe.md" />
+    <Content Include="node_modules\grunt\node_modules\dateformat\package.json" />
+    <Content Include="node_modules\grunt\node_modules\dateformat\Readme.md" />
+    <Content Include="node_modules\grunt\node_modules\dateformat\test\test_weekofyear.sh" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\package.json" />
+    <Content Include="node_modules\grunt\node_modules\eventemitter2\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\.jshintrc" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\LICENSE-MIT" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\.bin\lodash" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\.bin\lodash.cmd" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\doc\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\package.json" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\test\template\a.jst" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\test\template\b.jst" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\test\template\c.jst" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\test\template\d.tpl" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\benchmark.js\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\platform.js\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\qunit-clib\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\qunit\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\block-stream\LICENCE" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\block-stream\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\LICENCE" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\fstream\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\graceful-fs\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\graceful-fs\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\inherits\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\mkdirp\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\mkdirp\README.markdown" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\rimraf\AUTHORS" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\rimraf\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\tar\vendor\rimraf\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\underscore\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\node_modules\lodash\vendor\underscore\README.md" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\package.json" />
+    <Content Include="node_modules\grunt\node_modules\findup-sync\README.md" />
+    <Content Include="node_modules\grunt\node_modules\glob\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\glob\.travis.yml" />
+    <Content Include="node_modules\grunt\node_modules\glob\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\package.json" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\graceful-fs\README.md" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\inherits\package.json" />
+    <Content Include="node_modules\grunt\node_modules\glob\node_modules\inherits\README.md" />
+    <Content Include="node_modules\grunt\node_modules\glob\package.json" />
+    <Content Include="node_modules\grunt\node_modules\glob\README.md" />
+    <Content Include="node_modules\grunt\node_modules\glob\test\bash-results.json" />
+    <Content Include="node_modules\grunt\node_modules\hooker\LICENSE-MIT" />
+    <Content Include="node_modules\grunt\node_modules\hooker\package.json" />
+    <Content Include="node_modules\grunt\node_modules\hooker\README.md" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\.travis.yml" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\package.json" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\README.md" />
+    <Content Include="node_modules\grunt\node_modules\iconv-lite\README.md~" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\examples\custom_types.yaml" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\examples\dumper.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\examples\sample_document.yaml" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\HISTORY.md" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\.bin\esparse" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\.bin\esparse.cmd" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\.bin\esvalidate" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\.bin\esvalidate.cmd" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\HISTORY.md" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\.travis.yml" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\component.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\Gemfile" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\Gemfile.lock" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\libpeerconnection.log" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\package.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\Rakefile" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\README.markdown" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\.travis.yml" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\CNAME" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\CONTRIBUTING.md" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\package.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\README.md" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\package.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\argparse\README.md" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\ChangeLog" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\component.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\LICENSE.BSD" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\package.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\node_modules\esprima\README.md" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\package.json" />
+    <Content Include="node_modules\grunt\node_modules\js-yaml\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\package.json" />
+    <Content Include="node_modules\grunt\node_modules\lodash\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\LICENCE" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\block-stream\LICENCE" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\block-stream\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\fstream\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\graceful-fs\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\graceful-fs\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\inherits\README.md" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\mkdirp\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\mkdirp\readme.markdown" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\rimraf\AUTHORS" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\rimraf\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\lodash\vendor\tar\vendor\rimraf\README.md" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\AUTHORS" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\package.json" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\README.md" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\sigmund\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\sigmund\package.json" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\node_modules\sigmund\README.md" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\package.json" />
+    <Content Include="node_modules\grunt\node_modules\minimatch\README.md" />
+    <Content Include="node_modules\grunt\node_modules\nopt\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\nopt\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\nopt\node_modules\abbrev\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\nopt\node_modules\abbrev\package.json" />
+    <Content Include="node_modules\grunt\node_modules\nopt\node_modules\abbrev\README.md" />
+    <Content Include="node_modules\grunt\node_modules\nopt\package.json" />
+    <Content Include="node_modules\grunt\node_modules\nopt\README.md" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\AUTHORS" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\node_modules\graceful-fs\.npmignore" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\node_modules\graceful-fs\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\node_modules\graceful-fs\package.json" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\node_modules\graceful-fs\README.md" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\package.json" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\README.md" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\test\run.sh" />
+    <Content Include="node_modules\grunt\node_modules\rimraf\test\setup.sh" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\.travis.yml" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\Gemfile" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\Gemfile.lock" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\package.json" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\Rakefile" />
+    <Content Include="node_modules\grunt\node_modules\underscore.string\README.markdown" />
+    <Content Include="node_modules\grunt\node_modules\which\bin\which" />
+    <Content Include="node_modules\grunt\node_modules\which\LICENSE" />
+    <Content Include="node_modules\grunt\node_modules\which\package.json" />
+    <Content Include="node_modules\grunt\node_modules\which\README.md" />
+    <Content Include="node_modules\grunt\package.json" />
+    <Content Include="node_modules\grunt\README.md" />
+    <Content Include="node_modules\grunt\test\fixtures\exec.cmd" />
+    <Content Include="node_modules\grunt\test\fixtures\exec.sh" />
+    <Content Include="node_modules\grunt\test\fixtures\expand-mapping-ext\dir.ectory\file-no-extension" />
+    <Content Include="node_modules\grunt\test\fixtures\expand-mapping-ext\dir.ectory\sub.dir.ectory\file.ext.ension" />
+    <Content Include="node_modules\grunt\test\fixtures\expand-mapping-ext\file.ext.ension" />
+    <Content Include="node_modules\grunt\test\fixtures\expand\README.md" />
+    <Content Include="node_modules\grunt\test\fixtures\iso-8859-1.json" />
+    <Content Include="node_modules\grunt\test\fixtures\iso-8859-1.yaml" />
+    <Content Include="node_modules\grunt\test\fixtures\test.json" />
+    <Content Include="node_modules\grunt\test\fixtures\utf8.json" />
+    <Content Include="node_modules\grunt\test\fixtures\utf8.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.key" />
+    <Content Include="d.ts\DefinitelyTyped\jasmine\jasmine.d.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\CoursesFactory.js.map">
+      <DependentUpon>CoursesFactory.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\app.js.map">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHome.js.map">
+      <DependentUpon>CoursesHome.ts</DependentUpon>
+    </Content>
+    <Content Include="app\CoursesHomeController.js.map">
+      <DependentUpon>CoursesHomeController.ts</DependentUpon>
+    </Content>
+    <None Include="app\ICourse.js.map" />
+    <Content Include="app\selector.js.map">
+      <DependentUpon>selector.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
+</Project>

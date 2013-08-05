@@ -1,3 +1,8 @@
+coverage
+report
+bin
+obj
+node_modules
 lib-cov
 *.seed
 *.log

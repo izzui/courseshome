@@ -1,0 +1,1 @@
+declare function watch(obj:any, prop:string, callback:any);
