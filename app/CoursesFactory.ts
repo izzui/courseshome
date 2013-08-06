@@ -2,12 +2,7 @@
 
 class CoursesFactory {
 
-    findCourses(topic: string = "All",
-        language: string = "All languages",
-        sortOrder: string = "Views",
-        page: number = 1,
-        coursesPerPage: number = 3): ICourse[] {
-
+    findCourses(topic: string, language: string, sortOrder: string, page: number, coursesPerPage: number): ICourse[] {
         return this.filter(this.courses, topic, language).
             sort(this.sortFunction(sortOrder));
     }

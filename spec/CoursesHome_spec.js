@@ -7,6 +7,7 @@ describe("CoursesHome", function () {
         inject(function (coursesHomeModel) {
             _this.home = coursesHomeModel;
         });
+        _this.home.updateSearch({});
     });
 
     it("return all courses", function () {

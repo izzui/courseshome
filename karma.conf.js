@@ -29,8 +29,8 @@ exclude = [
 
 // test results reporter to use
 // possible values: 'dots', 'progress', 'junit'
-reporters = ['progress'];
-//reporters = ['progress', 'coverage'];
+//reporters = ['progress'];
+reporters = ['progress', 'coverage'];
 
 coverageReporter = {
     type: 'html',

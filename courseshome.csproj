@@ -724,6 +724,10 @@
     <Content Include="node_modules\grunt\test\util\namespace_test.js" />
     <Content Include="node_modules\grunt\test\util\task_test.js" />
     <Content Include="package.json" />
+    <TypeScriptCompile Include="spec\CoursesHomeController_spec.ts" />
+    <Content Include="spec\CoursesHomeController_spec.js">
+      <DependentUpon>CoursesHomeController_spec.ts</DependentUpon>
+    </Content>
     <Content Include="spec\CoursesHome_spec.js">
       <DependentUpon>CoursesHome_spec.ts</DependentUpon>
     </Content>
@@ -1081,6 +1085,7 @@
     <Content Include="app\selector.js.map">
       <DependentUpon>selector.ts</DependentUpon>
     </Content>
+    <None Include="spec\CoursesHomeController_spec.js.map" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
 </Project>

@@ -64,11 +64,6 @@ var CoursesFactory = (function () {
         ];
     }
     CoursesFactory.prototype.findCourses = function (topic, language, sortOrder, page, coursesPerPage) {
-        if (typeof topic === "undefined") { topic = "All"; }
-        if (typeof language === "undefined") { language = "All languages"; }
-        if (typeof sortOrder === "undefined") { sortOrder = "Views"; }
-        if (typeof page === "undefined") { page = 1; }
-        if (typeof coursesPerPage === "undefined") { coursesPerPage = 3; }
         return this.filter(this.courses, topic, language).sort(this.sortFunction(sortOrder));
     };
 

@@ -10,6 +10,7 @@ describe("CoursesHome", () => {
     beforeEach(() => {
         module('CoursesHomeApp');
         inject((coursesHomeModel) => { this.home = coursesHomeModel });
+        this.home.updateSearch({});
     });
 
     it("return all courses", () => {

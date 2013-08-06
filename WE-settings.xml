@@ -49,7 +49,7 @@
     <TypeScriptMinify>false</TypeScriptMinify>
     <TypeScriptProduceSourceMap>true</TypeScriptProduceSourceMap>
     <TypeScriptResaveWithUtf8BOM>false</TypeScriptResaveWithUtf8BOM>
-    <TypeScriptShowPreviewWindow>false</TypeScriptShowPreviewWindow>
+    <TypeScriptShowPreviewWindow>true</TypeScriptShowPreviewWindow>
     <TypeScriptUseAmdModule>false</TypeScriptUseAmdModule>
   </settings>
 </webessentials>
