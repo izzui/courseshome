@@ -110,3 +110,4 @@ var CoursesFactory = (function () {
     };
     return CoursesFactory;
 })();
+//@ sourceMappingURL=CoursesFactory.js.map

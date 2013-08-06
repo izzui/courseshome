@@ -56,6 +56,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".bowerrc" />
+    <Content Include="spec\lib\sinon-1.7.3.js" />
     <TypeScriptCompile Include="app\CoursesFactory.ts" />
     <TypeScriptCompile Include="app\app.ts" />
     <Content Include=".gitignore" />
@@ -105,6 +106,7 @@
     <Content Include="d.ts\DefinitelyTyped\angularjs\angular-mocks.d.ts" />
     <Content Include="d.ts\DefinitelyTyped\angularjs\angular.d.ts" />
     <Content Include="d.ts\DefinitelyTyped\jasmine\jasmine.d.ts" />
+    <Content Include="d.ts\DefinitelyTyped\sinon\sinon.d.ts" />
     <Content Include="d.ts\DefinitelyTyped\watch\watch.d.ts" />
     <Content Include="Gruntfile.js" />
     <Content Include="node_modules\grunt-contrib-watch\.gitattributes" />
@@ -1085,7 +1087,11 @@
     <Content Include="app\selector.js.map">
       <DependentUpon>selector.ts</DependentUpon>
     </Content>
-    <None Include="spec\CoursesHomeController_spec.js.map" />
+    <Content Include="spec\CoursesHomeController_spec.js.map">
+      <DependentUpon>CoursesHomeController_spec.ts</DependentUpon>
+    </Content>
+    <Content Include="d.ts\DefinitelyTyped\sinon\sinon.d.key" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
 </Project>

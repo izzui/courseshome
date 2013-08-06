@@ -13,3 +13,4 @@ var CoursesHomeController = (function () {
     };
     return CoursesHomeController;
 })();
+//@ sourceMappingURL=CoursesHomeController.js.map

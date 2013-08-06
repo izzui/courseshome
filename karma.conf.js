@@ -1,3 +1,4 @@
+/// <reference path="app/lib/sinon/lib/sinon.js" />
 // Karma configuration
 // Generated on Thu Aug 01 2013 11:40:43 GMT-0300 (E. South America Standard Time)
 
@@ -13,6 +14,7 @@ preprocessors = {
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+  'spec/lib/sinon-1.7.3.js',
   'app/lib/angular/angular.js',
   'app/lib/angular/angular-mocks.js',
   'app/app.js',
