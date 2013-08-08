@@ -7,8 +7,8 @@ class CoursesFactory {
             sort(this.sortFunction(sortOrder));
     }
 
-    sortBy(field: string, reverse: bool = false, primer = undefined): any {
-        var key = function (x) {return primer ? primer(x[field]) : x[field] };
+    sortBy(field: string, reverse: bool = false): any {
+        var key = function (x) { return x[field] };
 
         return function (a, b) {
             var A = key(a), B = key(b);

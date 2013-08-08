@@ -8,7 +8,7 @@ class CoursesHomeController {
         $scope.model.coursesRefreshed = (params) => { this.updateLocation($location, params) }
     }
 
-    updateLocation(location, params = {}): void {
+    updateLocation(location, params): void {
         location.search(params);
     }
 }

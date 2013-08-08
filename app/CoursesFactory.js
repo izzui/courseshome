@@ -67,11 +67,10 @@ var CoursesFactory = (function () {
         return this.filter(this.courses, topic, language).sort(this.sortFunction(sortOrder));
     };
 
-    CoursesFactory.prototype.sortBy = function (field, reverse, primer) {
+    CoursesFactory.prototype.sortBy = function (field, reverse) {
         if (typeof reverse === "undefined") { reverse = false; }
-        if (typeof primer === "undefined") { primer = undefined; }
         var key = function (x) {
-            return primer ? primer(x[field]) : x[field];
+            return x[field];
         };
 
         return function (a, b) {

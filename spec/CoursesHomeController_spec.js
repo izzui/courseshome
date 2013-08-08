@@ -23,4 +23,3 @@ describe("CoursesHome", function () {
         expect(controller.updateLocation.calledOnce).toBe(true);
     });
 });
-//@ sourceMappingURL=CoursesHomeController_spec.js.map

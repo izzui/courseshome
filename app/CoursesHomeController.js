@@ -8,7 +8,6 @@ var CoursesHomeController = (function () {
         };
     }
     CoursesHomeController.prototype.updateLocation = function (location, params) {
-        if (typeof params === "undefined") { params = {}; }
         location.search(params);
     };
     return CoursesHomeController;

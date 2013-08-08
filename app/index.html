@@ -17,13 +17,13 @@
     <iz-selector collection="model.languages" selector="model.language">Languages:</iz-selector><br/>
     <iz-selector collection="model.sortOrders" selector="model.sortOrder">Sort:</iz-selector>
 
-    <h1>{{model.coursesList.length}} Courses</h1>
+    <h1>{{model.coursesList.length}} courses</h1>
     <ul>
         <li ng-repeat="course in model.coursesPage">
             <div>{{course.title}}
-                - Views: {{course.views}}
-                - Rating: {{course.rating}}
-                - Published on: {{course.pubDate | date:shortDate}}</div>
+                - {{course.views}} views
+                - {{course.rating}} stars
+                - on {{course.pubDate | date:shortDate}}</div>
         </li>
     </ul>
 

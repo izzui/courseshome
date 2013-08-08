@@ -14,6 +14,7 @@ preprocessors = {
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+  'spec/lib/jquery-2.0.3.js',
   'spec/lib/sinon-1.7.3.js',
   'app/lib/angular/angular.js',
   'app/lib/angular/angular-mocks.js',
